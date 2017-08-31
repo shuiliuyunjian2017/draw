@@ -13,7 +13,7 @@ function Draw (opt) {
 		penColor: '#c00',//画笔颜色
 		penLineWidth: 4, //线条宽度
 		markInfoArr: [],//图片信息存储
-		saveInterval: 500 //画面保存间隔时间
+		saveInterval: 50 //画面保存间隔时间
 	};
 
 	this.opt = opt || defaultOpt;
@@ -224,7 +224,7 @@ Draw.prototype = {
 					return function () {
 						imgDom.src = imgs[i];
 					};
-				})(i), 500 * i);
+				})(i), this.saveInterval * i);
 		}
 
 		//清空图片存储数组
